@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Guess The Chapter!</h1>
+
+    <p>Votre score : {{score}}</p>
+    <p>{{message}}</p>
+
+    <div style="width: auto; height: {{image_height}}px; overflow: hidden;">
+      <img src="{{image_url}}" alt="Random manga page" style="width: 400px; height: 569px;">
+  </div>
+
+
+    <form method="POST">
+        <label for="chapter_guess">Devinez le chapitre :</label>
+        <input type="number" id="chapter_guess" name="chapter_guess" min="1" max="121">
+        <input type="submit" value="Soumettre">
+    </form>
+
+    <a href="https://cubari.moe/read/gist/cmF3L0ltU2FrdXNoaS9Pc2hpTm9Lb0ZSL21hc3Rlci9Pc2hpTm9Lby5qc29u/{{chapter}}/1/" target="_blank">
+        <button>Lire le chapitre</button>
+    </a>
+    <button onclick="window.location.href='/next';">Suivant</button>
+</body>
+</html>
